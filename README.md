@@ -1,1 +1,1 @@
-# DSA-21
+# Data structures and Algorithms course at Sofia University
