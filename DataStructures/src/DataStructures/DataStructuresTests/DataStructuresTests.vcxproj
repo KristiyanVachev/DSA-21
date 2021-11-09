@@ -24,6 +24,7 @@
     <ProjectGuid>{7fbf3dde-e853-4935-8ed9-84c62eb917e9}</ProjectGuid>
     <RootNamespace>DataStructuresTests</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>DynamicArrayTests</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
