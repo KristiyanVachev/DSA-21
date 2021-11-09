@@ -13,13 +13,28 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\DynamicArray">
+      <UniqueIdentifier>{649258d7-faa2-429d-9c5d-411e596c5f10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Stack">
+      <UniqueIdentifier>{c520dade-37be-4810-b748-3023ef4119a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Queue">
+      <UniqueIdentifier>{9ade37ee-f30f-4f5a-a933-80d4e87cb420}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataStructuresTests.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DynamicArrayTests.cpp">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\DynamicArray</Filter>
+    </ClCompile>
+    <ClCompile Include="StackTests.cpp">
+      <Filter>Header Files\Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="QueueTests.cpp">
+      <Filter>Header Files\Queue</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

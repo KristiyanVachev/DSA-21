@@ -13,15 +13,36 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="DynamicArray.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <Filter Include="Header Files\DynamicArray">
+      <UniqueIdentifier>{043d730f-d7f8-4f3d-a61b-f5b2e0557ef8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Stack">
+      <UniqueIdentifier>{f6b3b32c-cb59-48ed-8db2-65b154b5427c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Queue">
+      <UniqueIdentifier>{933a10f8-fde4-47ba-9365-b2fde5f7d204}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Startup.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DynamicArray.h">
+      <Filter>Header Files\DynamicArray</Filter>
+    </ClInclude>
+    <ClInclude Include="StackNode.h">
+      <Filter>Header Files\Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="Stack.h">
+      <Filter>Header Files\Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="Queue.h">
+      <Filter>Header Files\Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="QueueNode.h">
+      <Filter>Header Files\Queue</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
