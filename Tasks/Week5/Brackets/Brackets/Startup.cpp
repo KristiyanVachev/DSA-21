@@ -1,14 +1,37 @@
 #include <iostream>
+#include <string>
+#include <vector>
 #include "BracketsValidator.cpp"
 
 using namespace std;
 
 int main()
 {
-    char* sequence = new char[] {'[', ')'};
+	string sequence = "[]";
 
-    BracketsValidator* validator = new BracketsValidator();
+	string sequences[] =
+	{
+		"}][}}(}][))]",
+		"[](){()}",
+		"()",
+		"({}([][]))[]()",
+		"{)[](}]}]}))}(())(",
+		"([[)"
+	};
 
-    cout << validator->IsValid(sequence, 2) << endl;
+	BracketsValidator * validator = new BracketsValidator();
+
+	for (size_t i = 0; i < 6; i++)
+	{
+		if (validator->IsValid(sequences[i]))
+		{
+			cout << "YES" << endl;
+		}
+		else
+		{
+			cout << "NO" << endl;
+		}
+	}
+
 
 }

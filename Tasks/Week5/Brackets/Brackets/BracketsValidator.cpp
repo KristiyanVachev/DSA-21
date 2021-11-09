@@ -1,5 +1,6 @@
 #include "iostream"
 using namespace std;
+#include <string>
 
 #include "Stack.h"
 
@@ -16,14 +17,14 @@ private:
 	bool BracketsMatch(char opening, char closing);
 
 public:
-	bool IsValid(char* sequence, int size);
+	bool IsValid(string sequence);
 };
 
-inline bool BracketsValidator::IsValid(char* sequence, int size)
+inline bool BracketsValidator::IsValid(string sequence)
 {
 	Stack<char> openBrackets;
 
-	for (size_t i = 0; i < size; i++)
+	for (size_t i = 0; i < sequence.length(); i++)
 	{
 		if (!IsBracket(sequence[i]))
 		{
