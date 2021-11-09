@@ -8,7 +8,6 @@ private:
 
 public:
 	StackNode<T>(T value, StackNode<T>* lower);
-	~StackNode();
 
 	StackNode<T>* Lower();
 	T Value();
@@ -20,13 +19,6 @@ StackNode<T>::StackNode(T value, StackNode<T>* lower)
 	_value = value;
 	_lowerNode = lower;
 }
-
-template <typename T>
-StackNode<T>::~StackNode()
-{
-
-}
-
 
 template <typename T>
 StackNode<T>* StackNode<T>::Lower()

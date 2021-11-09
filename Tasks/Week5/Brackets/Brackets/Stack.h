@@ -9,13 +9,14 @@ private:
 
 public:
 	Stack();
+	Stack(const Stack& other) = delete;
+	Stack& operator=(const Stack& other) = delete;
 	~Stack();
 
 	bool IsEmpty();
 	void Push(T value);
 	T Pop();
-	T Peep();
-
+	T Peek();
 };
 
 template <typename T>
@@ -60,14 +61,13 @@ T Stack<T>::Pop()
 	T value = node->Value();
 
 	this->_top = node->Lower();
-
 	delete node;
 
 	return value;
 }
 
 template<typename T>
-T Stack<T>::Peep()
+T Stack<T>::Peek()
 {
 	return this->_top->Value();
 }
