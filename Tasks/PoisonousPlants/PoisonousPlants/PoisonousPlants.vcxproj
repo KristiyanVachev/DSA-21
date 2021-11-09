@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{fd157dfd-0a7c-4d31-bb7e-228c239132e8}</ProjectGuid>
+    <ProjectGuid>{4974abea-4f60-4282-b6f8-ad6895288738}</ProjectGuid>
     <RootNamespace>PoisonousPlants</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="PoisonousPlants.cpp" />
     <ClCompile Include="Startup.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
