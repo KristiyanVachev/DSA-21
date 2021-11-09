@@ -3,27 +3,34 @@
 template <typename T> class QueueNode
 {
 private:
-	QueueNode<T>* _next;
+	QueueNode<T>* _nextInLine;
 	T _value;
 
 public:
-	QueueNode<T>(T value, QueueNode<T>* lower);
+	QueueNode<T>(T value);
 
-	QueueNode<T>* Next();
+	QueueNode<T>* GetNextInLine();
+	void SetNextInLine(QueueNode<T>* nextInLine);
 	T Value();
 };
 
 template <class T>
-QueueNode<T>::QueueNode(T value, QueueNode<T>* next)
+QueueNode<T>::QueueNode(T value)
 {
 	_value = value;
-	_next = next;
+	_nextInLine = nullptr;
 }
 
 template <typename T>
-QueueNode<T>* QueueNode<T>::Next()
+QueueNode<T>* QueueNode<T>::GetNextInLine()
 {
-	return this->_next;
+	return this->_nextInLine;
+}
+
+template <typename T>
+void QueueNode<T>::SetNextInLine(QueueNode<T>* nextInLine)
+{
+	_nextInLine = nextInLine;
 }
 
 template <typename T>
