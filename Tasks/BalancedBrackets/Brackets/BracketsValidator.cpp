@@ -1,8 +1,7 @@
-#include "iostream"
-using namespace std;
 #include <string>
 
 #include "Stack.h"
+using namespace std;
 
 //Better to have a class of constants
 static const char OpeningBrackets[] = "{[(";
@@ -37,9 +36,7 @@ inline bool BracketsValidator::IsValid(string sequence)
 		}
 		else
 		{
-			char lastOpeningBracket = openBrackets.Pop();
-
-			if (!BracketsMatch(lastOpeningBracket, sequence[i]))
+			if (openBrackets.IsEmpty() || !BracketsMatch(openBrackets.Pop(), sequence[i]))
 			{
 				return false;
 			}

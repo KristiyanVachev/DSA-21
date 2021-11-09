@@ -1,14 +1,25 @@
-#include <iostream>
 #include <string>
-#include <vector>
+#include <iostream>
+
 #include "BracketsValidator.cpp"
 
 using namespace std;
 
+string isBalanced(string s) {
+	BracketsValidator* validator = new BracketsValidator();
+
+	if (validator->IsValid(s))
+	{
+		return "YES";;
+	}
+	else
+	{
+		return "NO";;
+	}
+}
+
 int main()
 {
-	string sequence = "[]";
-
 	string sequences[] =
 	{
 		"}][}}(}][))]",
@@ -19,18 +30,10 @@ int main()
 		"([[)"
 	};
 
-	BracketsValidator * validator = new BracketsValidator();
-
 	for (size_t i = 0; i < 6; i++)
 	{
-		if (validator->IsValid(sequences[i]))
-		{
-			cout << "YES" << endl;
-		}
-		else
-		{
-			cout << "NO" << endl;
-		}
+		cout << isBalanced(sequences[i]) << endl;
+
 	}
 
 

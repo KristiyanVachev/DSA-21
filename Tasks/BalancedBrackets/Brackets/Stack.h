@@ -57,6 +57,11 @@ void Stack<T>::Push(T value)
 template<typename T>
 T Stack<T>::Pop()
 {
+	if (this->_top == nullptr)
+	{
+		return NULL;
+	}
+
 	StackNode<T>* node = this->_top;
 	T value = node->Value();
 
