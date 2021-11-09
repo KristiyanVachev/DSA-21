@@ -1,36 +1,35 @@
 #include <iostream>
-#include <queue>
 #include <vector>
+
+#include "Queue.h"
 
 using namespace std;
 
 inline int poisonousPlants(vector<int> p)
 {
-    //TODO - use your own queue implementation
-    queue<int> pesticideLevelsOfAlivePlants;
+    Queue<int> pesticideLevelsOfAlivePlants;
 
     for (size_t i = 0; i < p.size(); i++)
     {
-        pesticideLevelsOfAlivePlants.push(p[i]);
+        pesticideLevelsOfAlivePlants.Enqueue(p[i]);
     }
 
     bool hasCasualtiesThisRound = true;
     int currentDay = -1;
 
-    while (hasCasualtiesThisRound && pesticideLevelsOfAlivePlants.size() >= 1)
+    while (hasCasualtiesThisRound && pesticideLevelsOfAlivePlants.Size() >= 1)
     {
         currentDay++;
         hasCasualtiesThisRound = false;
-        int alivePlantsTodayCount = pesticideLevelsOfAlivePlants.size();
+        int alivePlantsTodayCount = pesticideLevelsOfAlivePlants.Size();
 
-        int leftPesticideLevel = pesticideLevelsOfAlivePlants.front();
-        pesticideLevelsOfAlivePlants.pop();
-        pesticideLevelsOfAlivePlants.push(leftPesticideLevel);
+        int leftPesticideLevel = pesticideLevelsOfAlivePlants.Dequeue();
+
+        pesticideLevelsOfAlivePlants.Enqueue(leftPesticideLevel);
 
         for (size_t i = 1; i < alivePlantsTodayCount; i++)
         {
-            int currentPesticideLevel = pesticideLevelsOfAlivePlants.front();
-            pesticideLevelsOfAlivePlants.pop();
+            int currentPesticideLevel = pesticideLevelsOfAlivePlants.Dequeue();
 
             if (leftPesticideLevel < currentPesticideLevel)
             {
@@ -38,7 +37,7 @@ inline int poisonousPlants(vector<int> p)
             }
             else
             {
-                pesticideLevelsOfAlivePlants.push(currentPesticideLevel);
+                pesticideLevelsOfAlivePlants.Enqueue(currentPesticideLevel);
             }
 
             leftPesticideLevel = currentPesticideLevel;
