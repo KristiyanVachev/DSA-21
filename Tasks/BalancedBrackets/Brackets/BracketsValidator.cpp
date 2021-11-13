@@ -3,10 +3,9 @@
 #include "Stack.h"
 using namespace std;
 
-//Better to have a class of constants
-static const char OpeningBrackets[] = "{[(";
-static const char ClosingBrackets[] = "}])";
-static const int BracketsCount = sizeof(OpeningBrackets) / sizeof(OpeningBrackets[0]);
+const char OpeningBrackets[] = "{[(";
+const char ClosingBrackets[] = "}])";
+const int BracketsCount = sizeof(OpeningBrackets) / sizeof(OpeningBrackets[0]) - 1;
 
 class BracketsValidator
 {
@@ -72,7 +71,6 @@ inline bool BracketsValidator::IsBracket(char character)
 
 inline bool BracketsValidator::IsOpening(char character)
 {
-	//TODO How to get the size of the const array?
 	for (size_t i = 0; i < BracketsCount; i++)
 	{
 		if (character == OpeningBrackets[i])
