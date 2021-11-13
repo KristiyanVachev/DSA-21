@@ -65,8 +65,6 @@ TEST_CASE("poisonousPlants_SampeTestCase3")
 	REQUIRE(actualDay == expectedDay);
 }
 
-
-
 TEST_CASE("poisonousPlants_ShouldFinishOnDayOne_WhenAllPlantsInAscendingOrder")
 {
 	//Arrange
