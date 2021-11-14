@@ -15,9 +15,12 @@ Please upload your solutions in your GitHub repositories. You can check other pe
 * Костадин Костадинов [https://github.com/kostadin-k/sdp-21-22](https://github.com/kostadin-k/sdp-21-22)
 * Мартин Конов [https://github.com/MartinKonov/DSA21](https://github.com/MartinKonov/DSA21)
 * Петър Колев [https://github.com/pvarna/SDP](https://github.com/pvarna/SDP)
+* Теодор Христов [https://github.com/teodor-hristov/University/tree/main/Hackerrank](https://github.com/teodor-hristov/University/tree/main/Hackerrank)
 
 ## Tasks log
 You can check which tasks have been mentioned in which exercise, and potentially find and watch the video recording you need.  
 
 * Week 5 - **Balanced Brackets** - Given as homework
 * Week 6 - **Balanced Brackets** - Explained in Group F exercise
+* Week 6 - **Poisonous Plants** - Given as homework
+* Week 7 - **Poisonous Plants** - Explained in Group F exercise
